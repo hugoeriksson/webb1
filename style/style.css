@@ -56,3 +56,45 @@ nav a:hover {
         top: 10px;
         right: 10px;
     }
+    .background-image {
+        width: 100%;
+        height: auto;
+    }    
+
+    .card-container {
+        display: flex;
+        gap: 50px;
+        justify-content: center; /* Center the card container */
+        margin-top: 50px; /* Add some margin to separate from other content */
+    }
+    
+    .card {
+        width: 250px;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+        background: white;
+        text-align: center;
+    }
+    
+    .card img {
+        width: 100%;
+        display: block;
+        max-height: 100%; /* Adjust this value to fit the image within the card */
+    display: block;
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover img {
+        transform: scale(1.05);
+    }
+    
+    .info {
+        padding: 15px;
+    }
+    .info p {
+        color: black; /* Change this to the desired color */
+        margin: 0; /* Remove any default margin */
+        text-decoration: none; /* Ensure no text decoration is applied */
+    }
