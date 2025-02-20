@@ -18,12 +18,12 @@
             </ul>
         </nav>
     </header>
-    <h1>Välkommen till Voith</h1>>
+    <h1>Välkommen till Voith</h1>
     <div class="background-images">
+        <div class="text-overlay">Innovation Made Easy</div>
         <img class="background-image" src="images/industry.jpg" alt="Background Image 1">
         <img class="background-image" src="images/worker.png" alt="Background Image 2">
     </div>
-</body>
     <footer>
         <p>&copy; 2025 Voith group</p>
         <div class="social-links">
@@ -32,8 +32,11 @@
             <a href="https://www.instagram.com/voithgroup/" target="_blank">Instagram</a>
         </div>
     </footer>
+    <form id="search-form" action="/search" method="get">
+        <input type="text" id="search-input" name="query" placeholder="Search...">
+        <button type="submit">Search</button>
+    </form>
+    <div id="search-results"></div>
+    <script src="main.js"></script>
+</body>
 </html>
-<form action="/search" method="get">
-    <input type="text" name="query" placeholder="Search...">
-    <button type="submit">Search</button>
-</form>

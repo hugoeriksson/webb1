@@ -98,3 +98,22 @@ nav a:hover {
         margin: 0; /* Remove any default margin */
         text-decoration: none; /* Ensure no text decoration is applied */
     }
+    .background-images {
+        position: relative;
+    }
+    
+    .text-overlay {
+        position: absolute;
+        top: 100px; /* Adjust as needed */
+        left: 800px; /* Adjust as needed */
+        color: rgb(28, 77, 212); /* Adjust text color as needed */
+        font-size: 24px; /* Adjust font size as needed */
+        background-color: rgb(255, 255, 255); /* Optional: Add background color with transparency */
+        padding: 10px; /* Optional: Add padding */
+        border-radius: 5px; /* Optional: Add border radius */
+    }
+    
+    .background-image {
+        width: 100%;
+        height: auto;
+    }
