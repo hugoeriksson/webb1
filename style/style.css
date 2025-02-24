@@ -80,8 +80,9 @@ nav a:hover {
     
     .card img {
         width: 100%;
-        display: block;
-        max-height: 100%; /* Adjust this value to fit the image within the card */
+        height: 200px; /* Set a fixed height */
+        object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+     /* Adjust this value to fit the image within the card */
     display: block;
         transition: transform 0.3s ease;
     }
@@ -104,8 +105,8 @@ nav a:hover {
     
     .text-overlay {
         position: absolute;
-        top: 100px; /* Adjust as needed */
-        left: 800px; /* Adjust as needed */
+        top: 50px; /* Adjust as needed */
+        left: 650px; /* Adjust as needed */
         color: rgb(28, 77, 212); /* Adjust text color as needed */
         font-size: 24px; /* Adjust font size as needed */
         background-color: rgb(255, 255, 255); /* Optional: Add background color with transparency */
@@ -116,4 +117,23 @@ nav a:hover {
     .background-image {
         width: 100%;
         height: auto;
+    }
+    .hero-container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    
+    .hero-container .background-image {
+        width: 100%;
+        height: auto;
+    }
+    
+    .hero-container h1 {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3em;
+        color: rgb(0, 0, 0);
     }
