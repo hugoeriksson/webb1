@@ -135,18 +135,117 @@ form {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3em;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 
-.parallax {
+/* Styles for the hero container */
+.hero-container.parallax {
+    position: relative;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh; /* Adjust height as needed */
 }
 
+/* Styles for the content section */
 .content-section {
     padding: 50px;
     text-align: center;
+}
+
+/* Styles for the background images section */
+.background-images.parallax {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /* Adjust height as needed */
+}
+
+/* Styles for the text overlay */
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0); /* Example color */
+    text-align: center;
+}
+.hero-container h1 {
+    color: rgb(0, 0, 0); /* Text color */
+    font-size: 2.5rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center-align text */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add some padding */
+    background-color: rgba(200, 200, 200, 0.5); /* More transparent */
+    position: absolute; /* Position the text */
+    top: 11.3%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    width: 80%; /* Set a width for the text container */
+    max-width: 800px; /* Limit maximum width */
+}
+
+/* deepseeks button / button.css */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.fun-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.fun-button:hover {
+    transform: scale(1.1);
+    background-color: #2980b9;
+}
+
+.fun-button:active {
+    transform: scale(0.9);
+}
+
+/* Light mode (default) */
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark mode */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Button styling */
+#dark-mode-toggle {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #2980b9;
 }
