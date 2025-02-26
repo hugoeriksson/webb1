@@ -1,20 +1,4 @@
 const database = {
-    "customers": [
-        "Welcome customers! Here you will find information about our products and services.",
-        "We are proud to offer a wide range of products that will suit your needs."
-    ],
-    "suppliers": [
-        "Welcome suppliers! Here you will find information about our products and services.",
-        "We are proud to offer a wide range of products that will suit your needs."
-    ],
-    "journalists": [
-        "Welcome journalists! Here you will find information about our products and services.",
-        "We are proud to offer a wide range of products that will suit your needs."
-    ],
-    "applicants": [
-        "Welcome applicants! Here you will find information about our products and services.",
-        "We are proud to offer a wide range of products that will suit your needs."
-    ]
 };
 
 function searchDatabase(keyword) {

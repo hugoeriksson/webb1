@@ -190,18 +190,18 @@ form {
     max-width: 800px; /* Limit maximum width */
 }
 
-/* deepseeks button / button.css */
+/*  confetti button / button.css */
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 10vh;
 }
 
 .fun-button {
-    padding: 15px 30px;
+    padding: 1px 3px;
     font-size: 1.2rem;
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: #3498db;
     border: none;
     border-radius: 5px;
