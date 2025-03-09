@@ -146,7 +146,8 @@ form {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh; /* Adjust height as needed */
+    height: 100vh;
+    /* Adjust height as needed */
 }
 
 /* Styles for the content section */
@@ -162,7 +163,8 @@ form {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh; /* Adjust height as needed */
+    height: 100vh;
+    /* Adjust height as needed */
 }
 
 /* Styles for the text overlay */
@@ -171,23 +173,38 @@ form {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0); /* Example color */
+    color: rgb(0, 0, 0);
+    /* Example color */
     text-align: center;
 }
+
 .hero-container h1 {
-    color: rgb(0, 0, 0); /* Text color */
-    font-size: 2.5rem; /* Font size */
-    font-weight: bold; /* Bold text */
-    text-align: center; /* Center-align text */
-    margin: 0; /* Remove default margin */
-    padding: 20px; /* Add some padding */
-    background-color: rgba(200, 200, 200, 0.5); /* More transparent */
-    position: absolute; /* Position the text */
-    top: 11.3%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust for exact centering */
-    width: 80%; /* Set a width for the text container */
-    max-width: 800px; /* Limit maximum width */
+    color: rgb(0, 0, 0);
+    /* Text color */
+    font-size: 2.5rem;
+    /* Font size */
+    font-weight: bold;
+    /* Bold text */
+    text-align: center;
+    /* Center-align text */
+    margin: 0;
+    /* Remove default margin */
+    padding: 15px;
+    /* Add some padding */
+    background-color: rgba(200, 200, 200, 0.5);
+    /* More transparent */
+    position: absolute;
+    /* Position the text */
+    top: 12.5%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust for exact centering */
+    width: 80%;
+    /* Set a width for the text container */
+    max-width: 800px;
+    /* Limit maximum width */
 }
 
 /*  confetti button / button.css */
@@ -233,15 +250,15 @@ body.dark-mode {
 
 /* Button styling */
 #dark-mode-toggle {
-    padding: 10px 20px;
+    padding: 8px 16px;
     font-size: 1rem;
     color: white;
     background-color: #3498db;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    position: fixed;
-    top: 20px;
+    position: absolute;
+    top: 4px;
     right: 20px;
     z-index: 1000;
 }
@@ -249,3 +266,201 @@ body.dark-mode {
 #dark-mode-toggle:hover {
     background-color: #2980b9;
 }
+
+.fun-button {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+ body {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.grön {
+    color: #2E7D32; 
+}
+
+/* Hero Section */
+
+.hero {
+    background-image: url('sustainability-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+
+.content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 30%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Call to Action Section */
+.cta {
+    background-color: #2E7D32;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    background-color: #ffffff;
+    color: #2E7D32;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+    color: #1B5E20;
+}
+
+.slides {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+
+}
+
+.slides .section {
+    width: 80%;
+    max-width: 800px;
+    min-width: 800px;
+    height: 500px;
+    margin: 15px 0;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.section div {
+    padding: 40px;
+}
+
+.section:nth-child(odd) {
+    transform: translateX(-100%);
+}
+
+.section:nth-child(even) {
+    transform: translateX(100%);
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section.hide {
+    opacity: 0;
+    transform: translateX(-100%) !important;
+}
+
+.section:nth-child(1) {
+    background: #ff5733;
+}
+
+.section:nth-child(2) {
+    background: #33a8ff;
+}
+
+.section:nth-child(3) {
+    background: #33ff57;
+}
+
+.section:nth-child(4) {
+    background: #f0a500;
+}
+
+.section:nth-child(5) {
+    background: #ff5733;
+}
+
+.p10 {
+    text-align: center;
+    color: #2E7D32;
+    font-size: 2em;
+}       
