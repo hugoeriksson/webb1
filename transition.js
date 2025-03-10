@@ -14,10 +14,8 @@ function revealOnScroll() {
 
             section.classList.add("show");
 
-            // Ta bort "hide" från aktuell sektion så att den inte fastnar i osynligt läge
             section.classList.remove("hide");   
 
-            // Om det finns en föregående sektion, göm den när vi scrollar ner
             if (index > 0 && scrollDirection === "down") {
                 sections[index - 1].classList.add("hide");
             }
