@@ -1,10 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="js/script.js"></script>
 <head>
     <link rel="stylesheet" href="style/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voith hemsida</title>
+    <title>Voith</title>
+    <style>
+        /* Pixel Rain Button Style */
+        #rainButton {
+            position: fixed;
+            top: 350px;
+            left: 735px;
+            padding: 10px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            z-index: 1000; /* Ensure the button stays on top */
+        }
+
+
+        /* Pixel Rain Effect Style */
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+
+        .pixel {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -16,18 +51,26 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="history.html">History</a></li>
                 <li><a href="sustainability.html">Sustainability</a></li>
-                </ul>
+            </ul>
         </nav>
     </header>
-<body>
+
+
     <h1>Fun Functions!</h1>
+
 
     <div class="button-container">
         <button class="fun-button">Click Me!</button>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-    <script src="js/script.js"></script>
-    
+
+
+    <!-- Pixel Rain Button -->
+    <button id="rainButton">Start Pixel Rain!</button>
+
 </body>
 
 </html>
+
+
+
+

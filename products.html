@@ -1,12 +1,190 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voith Turbo SafeSet Products</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Voith - SafeSet Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <style>
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--text-color);
+        }
+
+        body.dark-mode {
+            --primary-color: #2196f3;
+            --secondary-color: #64b5f6;
+            --accent-color: #1a1a2e;
+            --text-color: #e0e0e0;
+            --light-gray: #121212;
+            --white: #1e1e1e;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+
+
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        h2 {
+            color: var(--secondary-color);
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 1rem;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 0.5rem;
+        }
+
+        .product-card {
+            background-color: var(--accent-color);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .product-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .imgp1, .imgp2 {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .imgp1:hover, .imgp2:hover {
+            transform: scale(1.03);
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+        }
+
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 87, 183, 0.8);
+            color: white;
+            padding: 0.8rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .image-container:hover .image-caption {
+            transform: translateY(0);
+        }
+
+        .feature-icon {
+            color: var(--primary-color);
+            margin-right: 8px;
+        }
+
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 0;
+            }
+            
+            nav a {
+                padding: 0.5rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 1.5rem;
+            }
+            
+            .product-images {
+                grid-template-columns: 1fr;
+            }
+        } 
+    </style>
 </head>
-<body class = "products-page">
+<body class="products-page">
     <header>
         <nav>
             <ul>
@@ -20,58 +198,76 @@
         </nav>
     </header>
 
-    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <button id="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
 
     <main>
         <section>
             <h1>Voith Turbo SafeSet Products</h1>
             <p>
-                Voith Turbo SafeSet specializes in advanced torque-limiting and connection couplings 
-                designed to protect drivetrains from overload, ensuring reliability and efficiency in 
-                various industries. These products are essential in applications where precise torque 
+                Voith Turbo SafeSet specializes in advanced torque-limiting and connection couplings
+                designed to protect drivetrains from overload, ensuring reliability and efficiency in
+                various industries. These products are essential in applications where precise torque
                 transmission and safety are critical, such as mining, marine, energy, and heavy machinery.
             </p>
 
             <h2>Key SafeSet Products</h2>
 
-            <h3>SafeSet Torque Limiters</h3>
-            <ul>
-                <li>Automatically disengage during overload to prevent damage.</li>
-                <li>Resettable design for minimal downtime.</li>
-                <li>Precise torque settings to protect equipment.</li>
-            </ul>
+            <div class="product-card">
+                <h3><i class="fas fa-shield-alt feature-icon"></i> SafeSet Torque Limiters</h3>
+                <ul>
+                    <li>Automatically disengage during overload to prevent damage.</li>
+                    <li>Resettable design for minimal downtime.</li>
+                    <li>Precise torque settings to protect equipment.</li>
+                </ul>
+            </div>
 
-            <h3>SlipSet</h3>
-            <ul>
-                <li>Allows controlled slipping to absorb shock loads.</li>
-                <li>Ideal for applications with frequent load changes.</li>
-            </ul>
+            <div class="product-card">
+                <h3><i class="fas fa-sync feature-icon"></i> SlipSet</h3>
+                <ul>
+                    <li>Allows controlled slipping to absorb shock loads.</li>
+                    <li>Ideal for applications with frequent load changes.</li>
+                </ul>
+            </div>
 
-            <h3>SmartSet</h3>
-            <ul>
-                <li>Adaptive torque-limiting coupling with monitoring capabilities.</li>
-                <li>Enables real-time adjustments to optimize performance.</li>
-            </ul>
+            <div class="product-card">
+                <h3><i class="fas fa-microchip feature-icon"></i> SmartSet</h3>
+                <ul>
+                    <li>Adaptive torque-limiting coupling with monitoring capabilities.</li>
+                    <li>Enables real-time adjustments to optimize performance.</li>
+                </ul>
+            </div>
 
-            <h3>AutoSet</h3>
-            <ul>
-                <li>Self-adjusting coupling for automated load management.</li>
-                <li>Improves efficiency in high-demand applications.</li>
-            </ul>
+            <div class="product-card">
+                <h3><i class="fas fa-cogs feature-icon"></i> AutoSet</h3>
+                <ul>
+                    <li>Self-adjusting coupling for automated load management.</li>
+                    <li>Improves efficiency in high-demand applications.</li>
+                </ul>
+            </div>
 
             <p>
-                These solutions enhance equipment lifespan, reduce maintenance costs, and improve 
-                overall system performance. With a focus on safety and innovation, Voith Turbo SafeSet 
+                These solutions enhance equipment lifespan, reduce maintenance costs, and improve
+                overall system performance. With a focus on safety and innovation, Voith Turbo SafeSet
                 ensures maximum protection for critical industrial applications.
             </p>
 
             <div class="product-images">
-                <img class="imgp1" src="images/1.jpg" alt="SafeSet Product 1">
-                <img class="imgp2" src="images/2.jpg" alt="SafeSet Product 2">
+                <div class="image-container">
+                    <img class="imgp1" src="images/1.jpg" alt="SafeSet Product 1">
+                    <div class="image-caption">SafeSet Torque Limiter Installation</div>
+                </div>
+                <div class="image-container">
+                    <img class="imgp2" src="images/2.jpg" alt="SafeSet Product 2">
+                    <div class="image-caption">SmartSet System in Action</div>
+                </div>
             </div>
         </section>
     </main>
 
-    <script src="js/script.js"></script>
+
+    <script src="/js/script.js"></script>
+
 </body>
 </html>

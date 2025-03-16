@@ -1,53 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Voith's commitment to sustainability and their eco-friendly technologies.">
-    <title>Voith Sustainability</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Sustainability at Voith</title>
+    <!-- Link to your existing CSS file -->
+    <link rel="stylesheet" href="/style/style.css">
+    <!-- Page-specific styles with unique class names -->
+    <style>
+        /* Info page specific styles - using 'info-' prefix */
+        .info-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .info-title {
+            font-size: 2.5rem;
+            color: #333;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .info-subtitle {
+            font-size: 1.5rem;
+            color: #555;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .info-section {
+            margin: 3rem 0;
+        }
+
+        .info-section-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .info-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 905px;
+            height: 3px;
+            background-color: #0066cc;
+        }
+
+        .info-card {
+            display: flex;
+            margin-bottom: 3rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Even cards have image on right */
+        .info-card:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .info-card-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 300px;
+            min-height: 300px;
+            max-height: 300px;
+            overflow: hidden;
+        }
+
+        .info-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .info-card:hover .info-card-image img {
+            transform: scale(1.05);
+        }
+
+        .info-card-content {
+            flex: 1;
+            padding: 30px;
+        }
+
+        .info-card-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .info-card-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        /* Dark mode styles */
+        .dark-mode .info-card {
+            background-color: #2d2d2d;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .dark-mode .info-title,
+        .dark-mode .info-section-title,
+        .dark-mode .info-card-title {
+            color: #f1f1f1;
+        }
+
+        .dark-mode .info-subtitle,
+        .dark-mode .info-card-text {
+            color: #d1d1d1;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+
+            .info-card,
+            .info-card:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .info-card-image {
+                min-height: 250px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <button id="dark-mode-toggle">Toggle Dark Mode</button>
-    <script src="js/script.js"></script>
-    <header>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="/js/script.js"></script>
+
+    <button id="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+    <header class="about-header">
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="history.html">History</a></li>
-                <li><a href="careers.html">Careers</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="sustainability.html">Sustainability</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/history.html">History</a></li>
+                <li><a href="/careers.html">Careers</a></li>
+                <li><a href="/products.html">Products</a></li>
+                <li><a href="/sustainability.html">Sustainability</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-text">
-            <h1 class = "grön">Voith and Sustainability: Shaping a Greener Future</h1>
-            <p class = p10>Innovating for a more sustainable tomorrow through technology and energy solutions.</p>
-        </div>
-    </header>
 
-    <!-- Main Content Section -->
-    <section class="content">
-        <h2 class = "grön">Voith’s Role in Promoting Sustainable Technologies</h2>
-        <p>Voith, a global leader in industrial technology, is committed to sustainability. Their innovations in renewable energy, resource efficiency, and environmental responsibility are paving the way for a greener future.</p>
+    <main class="info-container">
+        <h1 class="info-title">Sustainability at Voith
+        </h1>
+        <p class="info-subtitle"></p>
 
-        <div class="cards">
-            <div class="card">
-                <h3 class = "grön">🌱 Sustainable Energy Solutions</h3>
-                <p>Voith leads in hydropower technology, helping the world reduce reliance on fossil fuels.</p>
+        <section class="info-section">
+            <h2 class="info-section-title">Voith's Commitment to Sustainable Innovation and Responsibility
+            </h2>
+
+            <div class="info-card">
+                <div class="info-card-image">
+                    <img src="/images/s1.jpg" alt="Topic 1 image">
+                </div>
+                <div class="info-card-content">
+                    <h3 class="info-card-title">Sustainability in Innovation</h3>
+                    <div class="info-card-text">
+                        <p>  Voith is dedicated to integrating sustainability into its innovations. By developing energy-efficient technologies and utilizing renewable resources, the company helps industries reduce their carbon footprint. Their sustainable solutions not only contribute to environmental preservation but also foster long-term economic benefits for customers and communities.
+                        </p>
+                        <p></p>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3  class = "grön">♻️ Efficiency in Production</h3>
-                <p>Voith’s solutions reduce waste and energy consumption across various industries.</p>
+
+            <div class="info-card">
+                <div class="info-card-image">
+                    <img src="/images/s2.png" alt="Topic 2 image">
+                </div>
+                <div class="info-card-content">
+                    <h3 class="info-card-title">Circular Economy and Resource Management</h3>
+                    <div class="info-card-text">
+                        <p> Voith promotes a circular economy by focusing on the reuse and recycling of materials. Their processes emphasize reducing waste and maximizing resource efficiency. With a commitment to minimizing environmental impact, Voith supports the responsible management of raw materials throughout the entire product lifecycle, from production to disposal.</p>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3  class = "grön">🌍 Sustainability Goals</h3>
-                <p>Voith started being carbon neutral in 2022, contributing to a circular economy.</p>
+
+            <div class="info-card">
+                <div class="info-card-image">
+                    <img src="/images/s3.png" alt="Topic 3 image">
+                </div>
+                <div class="info-card-content">
+                    <h3 class="info-card-title">Sustainable Workforce and Society</h3>
+                    <div class="info-card-text">
+                        <p> Voith invests in its workforce and social responsibility, aiming to create a positive impact in local communities. By fostering diversity, equality, and safety, the company promotes a sustainable and inclusive workplace. Through various initiatives, Voith strives to contribute to social development and enhance the quality of life globally.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+    </main>
+
+    <script>
+        // Simple animation for cards as they come into view
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if Intersection Observer is supported
+            if ('IntersectionObserver' in window) {
+                const cards = document.querySelectorAll('.info-card');
+
+                // Add initial styles for animation
+                cards.forEach(card => {
+                    card.style.opacity = 0;
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                });
+
+                const cardObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = 1;
+                            entry.target.style.transform = 'translateY(0)';
+                            cardObserver.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.2 });
+
+                cards.forEach(card => {
+                    cardObserver.observe(card);
+                });
+            } else {
+                // Fallback for browsers that don't support Intersection Observer
+                document.querySelectorAll('.info-card').forEach(card => {
+                    card.style.opacity = 1;
+                    card.style.transform = 'translateY(0)';
+                });
+            }
+        });
+    </script>
 </body>
+
 </html>

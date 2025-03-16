@@ -1,3 +1,16 @@
+:root {
+    --primary-color: #0057b7;
+    --secondary-color: #004494;
+    --accent-color: #f0f8ff;
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --white: #ffffff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -131,12 +144,14 @@ form {
 
 .hero-container h1 {
     position: absolute;
-    top: 50%;
+    top: 15%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 3em;
-    color: rgb(255, 255, 255);
+    font-size: 2em;
+    color: rgb(0, 0, 0);
     text-align: center;
+    background-color: rgba(200, 200, 200, 0.4);
+
 }
 
 /* Styles for the hero container */
@@ -178,34 +193,7 @@ form {
     text-align: center;
 }
 
-.hero-container h1 {
-    color: rgb(0, 0, 0);
-    /* Text color */
-    font-size: 2.5rem;
-    /* Font size */
-    font-weight: bold;
-    /* Bold text */
-    text-align: center;
-    /* Center-align text */
-    margin: 0;
-    /* Remove default margin */
-    padding: 15px;
-    /* Add some padding */
-    background-color: rgba(200, 200, 200, 0.5);
-    /* More transparent */
-    position: absolute;
-    /* Position the text */
-    top: 12.5%;
-    /* Center vertically */
-    left: 50%;
-    /* Center horizontally */
-    transform: translate(-50%, -50%);
-    /* Adjust for exact centering */
-    width: 80%;
-    /* Set a width for the text container */
-    max-width: 800px;
-    /* Limit maximum width */
-}
+
 
 /*  confetti button / button.css */
 .button-container {
@@ -267,6 +255,30 @@ body.dark-mode {
     background-color: #2980b9;
 }
 
+#dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    z-index: 90;
+    transition: var(--transition);
+}
+
+#dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+
 .fun-button {
     opacity: 0;
     transform: translateX(-100%);
@@ -293,13 +305,13 @@ body.dark-mode {
     font-family: 'Arial', sans-serif;
 }
 
- body {
+body {
     background-color: #f9f9f9;
     color: #333;
 }
 
 .grön {
-    color: #2E7D32; 
+    color: #2E7D32;
 }
 
 /* Hero Section */
@@ -417,9 +429,28 @@ body.dark-mode {
     opacity: 0;
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
 .section div {
     padding: 40px;
+    max-width: 100%;
 }
+
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.section p {
+    font-size: 1.1rem;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
 
 .section:nth-child(odd) {
     transform: translateX(-100%);
@@ -463,58 +494,9 @@ body.dark-mode {
     text-align: center;
     color: #2E7D32;
     font-size: 2em;
-}       
-/* Styles specific to the Products page */
-.products-page main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.products-page h1, 
-.products-page h2, 
-.products-page h3 {
-    text-align: center;
-}
 
-.products-page h1 {
-    color: #0057b7;
-}
-
-.products-page h2, 
-.products-page h3 {
-    color: #004494;
-    margin-top: 20px;
-}
-
-.products-page ul {
-    padding-left: 20px;
-}
-
-.products-page .product-images {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.products-page .imgp1, 
-.products-page .imgp2 {
-    width: 60%;
-    height: auto;
-    display: inline-block;
-    margin: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.products-page .imgp1:hover, 
-.products-page .imgp2:hover {
-    transform: scale(1.05);
-}
-/* About page */ 
 /* Specific styles for the About page */
 .about-container {
     max-width: 800px;
@@ -523,7 +505,8 @@ body.dark-mode {
 }
 
 .about-title {
-    color: #005eb8; /* Voith blue */
+    color: #005eb8;
+    /* Voith blue */
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 2rem;
@@ -538,7 +521,8 @@ body.dark-mode {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background-color: #e30613; /* Voith red accent */
+    background-color: #e30613;
+    /* Voith red accent */
 }
 
 .about-content {
@@ -570,11 +554,11 @@ body.dark-mode {
     margin-bottom: 0.5rem;
 }
 
-.about-text4, .about-text5 {
+.about-text4,
+.about-text5 {
     line-height: 1.6;
     font-size: 1.1rem;
     margin-bottom: 1rem;
     color: #000000;
 
 }
-
