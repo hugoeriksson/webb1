@@ -1,16 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log("DOM fully loaded and parsed");
 
-    // Ensure the fun-button exists before accessing it
     const funButton = document.querySelector('.fun-button');
     if (funButton) {
         console.log("Fun button found");
-        // Make the button appear after 2 seconds
         setTimeout(() => {
             funButton.style.display = 'block';
         }, 2000);
 
-        // Add confetti animation on click
         funButton.addEventListener('click', () => {
             confetti({
                 particleCount: 100,
@@ -22,17 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Fun button not found");
     }
 
-    // Ensure the dark-mode-toggle button exists before accessing it
     const toggleButton = document.getElementById('dark-mode-toggle');
     if (toggleButton) {
         console.log("Toggle button found");
-        // Add click event listener to the button
         toggleButton.addEventListener('click', () => {
             console.log("Toggle button clicked");
-            // Toggle the 'dark-mode' class on the body
             document.body.classList.toggle('dark-mode');
 
-            // Toggle icon
             const icon = this.querySelector('i');
             if (icon.classList.contains('fa-moon')) {
                 icon.classList.remove('fa-moon');
@@ -42,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon.classList.add('fa-moon');
             }
 
-            // Save the user's preference in localStorage
             if (document.body.classList.contains('dark-mode')) {
                 localStorage.setItem('theme', 'dark');
                 console.log("Dark mode enabled");
@@ -55,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Toggle button not found");
     }
 
-    // Check for saved user preference on page load
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-mode');
@@ -67,8 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// Pixel Rain effect script
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const rainButton = document.getElementById("rainButton");
 
 
@@ -82,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function() {
         pixel.classList.add("pixel");
 
 
-        // Random starting positions and colors
         const startX = Math.random() * window.innerWidth;
         const startColor = getRandomColor();
 
@@ -94,7 +83,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.appendChild(pixel);
 
 
-        // Falling effect
         let yPos = 0;
         const fallSpeed = Math.random() * 3 + 2;
 
@@ -114,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
-    // Function to generate a random color
     function getRandomColor() {
         const letters = '0123456789ABCDEF';
         let color = '#';
@@ -126,5 +113,35 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    if ('IntersectionObserver' in window) {
+        const cards = document.querySelectorAll('.info-card');
+
+        cards.forEach(card => {
+            card.style.opacity = 0;
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        });
+
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                    cardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        cards.forEach(card => {
+            cardObserver.observe(card);
+        });
+    } else {
+        document.querySelectorAll('.info-card').forEach(card => {
+            card.style.opacity = 1;
+            card.style.transform = 'translateY(0)';
+        });
+    }
+});
 
 

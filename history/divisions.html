@@ -1,138 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informative Page</title>
-    <!-- Link to your existing CSS file -->
     <link rel="stylesheet" href="/style/style.css">
-    <!-- Page-specific styles with unique class names -->
     <style>
-        /* Info page specific styles - using 'info-' prefix */
-        .info-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .info-title {
-            font-size: 2.5rem;
-            color: #333;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .info-subtitle {
-            font-size: 1.5rem;
-            color: #555;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        
-        .info-section {
-            margin: 3rem 0;
-        }
-        
-        .info-section-title {
-            font-size: 1.8rem;
-            color: #333;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
         .info-section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 752.5px;
-            height: 3px;
-            background-color: #0066cc;
-        }
-        
-        .info-card {
-            display: flex;
-            margin-bottom: 3rem;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        
-        /* Even cards have image on right */
-        .info-card:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        
-        .info-card-image {
-            flex: 1;
-            min-width: 300px;
-            overflow: hidden;
-        }
-        
-        .info-card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-        
-        .info-card:hover .info-card-image img {
-            transform: scale(1.05);
-        }
-        
-        .info-card-content {
-            flex: 1;
-            padding: 30px;
-        }
-        
-        .info-card-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .info-card-text {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #555;
-        }
-        
-        /* Dark mode styles */
-        .dark-mode .info-card {
-            background-color: #2d2d2d;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-        
-        .dark-mode .info-title,
-        .dark-mode .info-section-title,
-        .dark-mode .info-card-title {
-            color: #f1f1f1;
-        }
-        
-        .dark-mode .info-subtitle,
-        .dark-mode .info-card-text {
-            color: #d1d1d1;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .info-card, 
-            .info-card:nth-child(even) {
-                flex-direction: column;
-            }
-            
-            .info-card-image {
-                min-height: 250px;
-            }
+            width: 750px;
         }
     </style>
 </head>
+
 <body>
 
-   
+
     <header class="about-header">
         <nav>
             <ul>
@@ -145,97 +28,70 @@
             </ul>
         </nav>
     </header>
-    
+
     <main class="info-container">
         <h1 class="info-title">Voith's Divisions</h1>
         <p class="info-subtitle"></p>
-        
+
         <section class="info-section">
-            <h2 class="info-section-title">Voith’s Divisions: Driving Innovation Across Industries            </h2>
-            
+            <h2 class="info-section-title">Voith’s Divisions: Driving Innovation Across Industries </h2>
+
             <div class="info-card">
                 <div class="info-card-image">
                     <img src="/images/vh.jpg" alt="Topic 1 image">
                 </div>
                 <div class="info-card-content">
-                    <h3 class="info-card-title">Voith Hydro: Powering the Future                    </h3>
+                    <h3 class="info-card-title">Voith Hydro: Powering the Future </h3>
                     <div class="info-card-text">
-                        <p>Voith Hydro is a global leader in hydropower solutions, providing turbines, generators, and automation systems for sustainable energy production. With over a century of experience, it helps drive the transition to renewable energy by improving efficiency, reliability, and environmental sustainability in hydroelectric power plants worldwide.
+                        <p>Voith Hydro is a global leader in hydropower solutions, providing turbines, generators, and
+                            automation systems for sustainable energy production. With over a century of experience, it
+                            helps drive the transition to renewable energy by improving efficiency, reliability, and
+                            environmental sustainability in hydroelectric power plants worldwide.
                         </p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="info-card">
                 <div class="info-card-image">
                     <img src="/images/vhp.webp" alt="Topic 2 image">
                 </div>
                 <div class="info-card-content">
-                    <h3 class="info-card-title"> Voith Paper: Innovating Paper Production                    </h3>
+                    <h3 class="info-card-title"> Voith Paper: Innovating Paper Production </h3>
                     <div class="info-card-text">
-                        <p>Voith Paper develops cutting-edge technologies for the paper industry, focusing on efficiency, digitalization, and sustainability. From stock preparation to paper finishing, Voith offers solutions that enhance productivity while reducing resource consumption. Its innovations support the transition to eco-friendly production processes, making paper manufacturing more sustainable and cost-effective.
+                        <p>Voith Paper develops cutting-edge technologies for the paper industry, focusing on
+                            efficiency, digitalization, and sustainability. From stock preparation to paper finishing,
+                            Voith offers solutions that enhance productivity while reducing resource consumption. Its
+                            innovations support the transition to eco-friendly production processes, making paper
+                            manufacturing more sustainable and cost-effective.
                         </p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="info-card">
                 <div class="info-card-image">
                     <img src="/images/vht.webp" alt="Topic 3 image">
                 </div>
                 <div class="info-card-content">
-                    <h3 class="info-card-title">Voith Turbo: Advanced Drive Solutions                   </h3>
+                    <h3 class="info-card-title">Voith Turbo: Advanced Drive Solutions </h3>
                     <div class="info-card-text">
-                        <p>Voith Turbo specializes in drive and automation systems for transportation, mining, and industrial applications. Its high-performance solutions improve efficiency, safety, and durability in vehicles, rail systems, and heavy machinery. With a focus on innovation, Voith Turbo continues to enhance mobility and industrial processes with state-of-the-art technology.</p>
+                        <p>Voith Turbo specializes in drive and automation systems for transportation, mining, and
+                            industrial applications. Its high-performance solutions improve efficiency, safety, and
+                            durability in vehicles, rail systems, and heavy machinery. With a focus on innovation, Voith
+                            Turbo continues to enhance mobility and industrial processes with state-of-the-art
+                            technology.</p>
                         <p></p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <script>
-        // Simple animation for cards as they come into view
-        document.addEventListener('DOMContentLoaded', function() {
-            // Check if Intersection Observer is supported
-            if ('IntersectionObserver' in window) {
-                const cards = document.querySelectorAll('.info-card');
-                
-                // Add initial styles for animation
-                cards.forEach(card => {
-                    card.style.opacity = 0;
-                    card.style.transform = 'translateY(20px)';
-                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                });
-                
-                const cardObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = 1;
-                            entry.target.style.transform = 'translateY(0)';
-                            cardObserver.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.2 });
-                
-                cards.forEach(card => {
-                    cardObserver.observe(card);
-                });
-            } else {
-                // Fallback for browsers that don't support Intersection Observer
-                document.querySelectorAll('.info-card').forEach(card => {
-                    card.style.opacity = 1;
-                    card.style.transform = 'translateY(0)';
-                });
-            }
-        });
-    </script>
 </body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="/js/script.js"></script>
 
 <button id="dark-mode-toggle">
     <i class="fas fa-moon"></i>
+
 </html>
-
-

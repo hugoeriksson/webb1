@@ -154,7 +154,6 @@ form {
 
 }
 
-/* Styles for the hero container */
 .hero-container.parallax {
     position: relative;
     background-attachment: fixed;
@@ -162,16 +161,13 @@ form {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    /* Adjust height as needed */
 }
 
-/* Styles for the content section */
 .content-section {
     padding: 50px;
     text-align: center;
 }
 
-/* Styles for the background images section */
 .background-images.parallax {
     position: relative;
     background-attachment: fixed;
@@ -179,23 +175,19 @@ form {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    /* Adjust height as needed */
 }
 
-/* Styles for the text overlay */
 .text-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(0, 0, 0);
-    /* Example color */
     text-align: center;
 }
 
 
 
-/*  confetti button / button.css */
 .button-container {
     display: flex;
     justify-content: center;
@@ -223,20 +215,17 @@ form {
     transform: scale(0.9);
 }
 
-/* Light mode (default) */
 body {
     background-color: white;
     color: black;
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark mode */
 body.dark-mode {
     background-color: #121212;
     color: white;
 }
 
-/* Button styling */
 #dark-mode-toggle {
     padding: 8px 16px;
     font-size: 1rem;
@@ -297,7 +286,6 @@ body.dark-mode {
     }
 }
 
-/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -314,7 +302,6 @@ body {
     color: #2E7D32;
 }
 
-/* Hero Section */
 
 .hero {
     background-image: url('sustainability-hero.jpg');
@@ -377,7 +364,6 @@ body {
     color: #555;
 }
 
-/* Call to Action Section */
 .cta {
     background-color: #2E7D32;
     color: white;
@@ -497,7 +483,6 @@ body {
 }
 
 
-/* Specific styles for the About page */
 .about-container {
     max-width: 800px;
     margin: 0 auto;
@@ -506,7 +491,6 @@ body {
 
 .about-title {
     color: #005eb8;
-    /* Voith blue */
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 2rem;
@@ -522,7 +506,6 @@ body {
     width: 80px;
     height: 3px;
     background-color: #e30613;
-    /* Voith red accent */
 }
 
 .about-content {
@@ -561,4 +544,120 @@ body {
     margin-bottom: 1rem;
     color: #000000;
 
+}
+.info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.info-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.info-subtitle {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.info-section {
+    margin: 3rem 0;
+}
+
+.info-section-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.info-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 560px;
+    height: 3px;
+    background-color: #0066cc;
+}
+
+.info-card {
+    display: flex;
+    margin-bottom: 3rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.info-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.info-card-image {
+    flex: 1;
+    min-width: 300px;
+    overflow: hidden;
+}
+
+.info-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover .info-card-image img {
+    transform: scale(1.05);
+}
+
+.info-card-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.info-card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.info-card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.dark-mode .info-card {
+    background-color: #2d2d2d;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .info-title,
+.dark-mode .info-section-title,
+.dark-mode .info-card-title {
+    color: #f1f1f1;
+}
+
+.dark-mode .info-subtitle,
+.dark-mode .info-card-text {
+    color: #d1d1d1;
+}
+
+@media (max-width: 768px) {
+    .info-card, 
+    .info-card:nth-child(even) {
+        flex-direction: column;
+    }
+    
+    .info-card-image {
+        min-height: 250px;
+    }
 }

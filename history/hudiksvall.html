@@ -1,141 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informative Page</title>
-    <!-- Link to your existing CSS file -->
+    <title>Voith In Hudiksvall</title>
     <link rel="stylesheet" href="/style/style.css">
-    <!-- Page-specific styles with unique class names -->
     <style>
-        /* Info page specific styles - using 'info-' prefix */
-        .info-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .info-title {
-            font-size: 2.5rem;
-            color: #333;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .info-subtitle {
-            font-size: 1.5rem;
-            color: #555;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        
-        .info-section {
-            margin: 3rem 0;
-        }
-        
-        .info-section-title {
-            font-size: 1.8rem;
-            color: #333;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
         .info-section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
             width: 1040px;
-            height: 3px;
-            background-color: #0066cc;
         }
-        
-        .info-card {
-            display: flex;
-            margin-bottom: 3rem;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        
-        /* Even cards have image on right */
-        .info-card:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-        
         .info-card-image {
-            flex: 1;
             min-width: 300px;
-            max-height: 400px;
-            max-width: 500px;
-
-            overflow: hidden;
-        }
-        
-        .info-card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-        
-        .info-card:hover .info-card-image img {
-            transform: scale(1.05);
-        }
-        
-        .info-card-content {
-            flex: 1;
-            padding: 30px;
-        }
-        
-        .info-card-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .info-card-text {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #555;
-        }
-        
-        /* Dark mode styles */
-        .dark-mode .info-card {
-            background-color: #2d2d2d;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-        
-        .dark-mode .info-title,
-        .dark-mode .info-section-title,
-        .dark-mode .info-card-title {
-            color: #f1f1f1;
-        }
-        
-        .dark-mode .info-subtitle,
-        .dark-mode .info-card-text {
-            color: #d1d1d1;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .info-card, 
-            .info-card:nth-child(even) {
-                flex-direction: column;
-            }
-            
-            .info-card-image {
-                min-height: 250px;
-            }
+            max-height: 450px;
         }
     </style>
 </head>
+
 <body>
 
-   
+
     <header class="about-header">
         <nav>
             <ul>
@@ -148,14 +32,15 @@
             </ul>
         </nav>
     </header>
-    
+
     <main class="info-container">
         <h1 class="info-title">Voith in Hudiksvall</h1>
         <p class="info-subtitle"></p>
-        
+
         <section class="info-section">
-            <h2 class="info-section-title">Voith Turbo Safeset AB in Hudiksvall: Pioneering Torque Limiting Solutions            </h2>
-            
+            <h2 class="info-section-title">Voith Turbo Safeset AB in Hudiksvall: Pioneering Torque Limiting Solutions
+            </h2>
+
             <div class="info-card">
                 <div class="info-card-image">
                     <img src="/images/h1.png" alt="Topic 1 image">
@@ -163,13 +48,20 @@
                 <div class="info-card-content">
                     <h3 class="info-card-title">Establishment and Expertise</h3>
                     <div class="info-card-text">
-                        <p>Voith Turbo Safeset AB, located in Hudiksvall, Sweden, specializes in developing and manufacturing advanced torque limiting couplings, process improvers, and connection couplings. Established in 1982, the company has over 30 years of experience in protecting drivelines in rotating equipment across various industries, including mining, steel, marine, energy, rail, and recycling. With a strong focus on innovation and quality, Voith Turbo Safeset AB provides reliable, high-performance solutions that ensure operational efficiency, reduce downtime, and extend the lifespan of critical machinery in harsh industrial environments worldwide.
+                        <p>Voith Turbo Safeset AB, located in Hudiksvall, Sweden, specializes in developing and
+                            manufacturing advanced torque limiting couplings, process improvers, and connection
+                            couplings. Established in 1982, the company has over 30 years of experience in protecting
+                            drivelines in rotating equipment across various industries, including mining, steel, marine,
+                            energy, rail, and recycling. With a strong focus on innovation and quality, Voith Turbo
+                            Safeset AB provides reliable, high-performance solutions that ensure operational efficiency,
+                            reduce downtime, and extend the lifespan of critical machinery in harsh industrial
+                            environments worldwide.
 
                         </p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="info-card">
                 <div class="info-card-image">
                     <img src="/images/h2.jfif" alt="Topic 2 image">
@@ -178,70 +70,41 @@
                     <h3 class="info-card-title"> Innovative Product Range</h3>
                     <div class="info-card-text">
                         <p>The company's product portfolio includes:
-                            Torque Limiting Couplings: These couplings protect machinery from overload by releasing or slipping at a precise set torque, thereby maximizing production uptime.
-                            
-                            
-                            
-                            Connection Couplings: Hydraulically set and reset couplings, such as HyCon, HyLoc, and HyGrip, provide high-performance shaft connections, ensuring reliability and efficiency in various applications.
-                            </p>
+                            Torque Limiting Couplings: These couplings protect machinery from overload by releasing or
+                            slipping at a precise set torque, thereby maximizing production uptime.
+
+
+
+                            Connection Couplings: Hydraulically set and reset couplings, such as HyCon, HyLoc, and
+                            HyGrip, provide high-performance shaft connections, ensuring reliability and efficiency in
+                            various applications.
+                        </p>
 
                     </div>
                 </div>
             </div>
-            
+
             <div class="info-card">
                 <div class="info-card-image">
                     <img src="/images/h3.avif" alt="Topic 3 image">
                 </div>
                 <div class="info-card-content">
-                    <h3 class="info-card-title">Commitment to Research and Development                   </h3>
+                    <h3 class="info-card-title">Commitment to Research and Development </h3>
                     <div class="info-card-text">
-                        <p>Continuous research and development form the backbone of Voith Turbo Safeset AB's product innovation. The company's technical department designs new drivelines or retrofits existing ones, simulating various design proposals to maximize potential without risking damage. This dedication ensures that their solutions meet the evolving demands of modern driveline technology.
-                            Through its expertise and commitment to innovation, Voith Turbo Safeset AB in Hudiksvall continues to lead in providing advanced solutions for driveline protection and optimization.
-                            </p>
+                        <p>Continuous research and development form the backbone of Voith Turbo Safeset AB's product
+                            innovation. The company's technical department designs new drivelines or retrofits existing
+                            ones, simulating various design proposals to maximize potential without risking damage. This
+                            dedication ensures that their solutions meet the evolving demands of modern driveline
+                            technology.
+                            Through its expertise and commitment to innovation, Voith Turbo Safeset AB in Hudiksvall
+                            continues to lead in providing advanced solutions for driveline protection and optimization.
+                        </p>
                         <p></p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    
-    <script>
-        // Simple animation for cards as they come into view
-        document.addEventListener('DOMContentLoaded', function() {
-            // Check if Intersection Observer is supported
-            if ('IntersectionObserver' in window) {
-                const cards = document.querySelectorAll('.info-card');
-                
-                // Add initial styles for animation
-                cards.forEach(card => {
-                    card.style.opacity = 0;
-                    card.style.transform = 'translateY(20px)';
-                    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                });
-                
-                const cardObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = 1;
-                            entry.target.style.transform = 'translateY(0)';
-                            cardObserver.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.2 });
-                
-                cards.forEach(card => {
-                    cardObserver.observe(card);
-                });
-            } else {
-                // Fallback for browsers that don't support Intersection Observer
-                document.querySelectorAll('.info-card').forEach(card => {
-                    card.style.opacity = 1;
-                    card.style.transform = 'translateY(0)';
-                });
-            }
-        });
-    </script>
 </body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="/js/script.js"></script>
@@ -249,5 +112,3 @@
 <button id="dark-mode-toggle">
     <i class="fas fa-moon"></i>
 </html>
-
-

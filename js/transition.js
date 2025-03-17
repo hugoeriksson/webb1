@@ -14,7 +14,7 @@ function revealOnScroll() {
 
             section.classList.add("show");
 
-            section.classList.remove("hide");   
+            section.classList.remove("hide");
 
             if (index > 0 && scrollDirection === "down") {
                 sections[index - 1].classList.add("hide");
