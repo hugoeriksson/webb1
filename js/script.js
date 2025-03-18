@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const toggleButton = document.getElementById('dark-mode-toggle');
+    const icon = this.querySelector('i');
     if (toggleButton) {
         console.log("Toggle button found");
         toggleButton.addEventListener('click', () => {
             console.log("Toggle button clicked");
             document.body.classList.toggle('dark-mode');
 
-            const icon = this.querySelector('i');
             if (icon.classList.contains('fa-moon')) {
                 icon.classList.remove('fa-moon');
                 icon.classList.add('fa-sun');
@@ -49,71 +49,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
         document.body.classList.add('dark-mode');
         console.log("Dark mode loaded from localStorage");
     } else {
         document.body.classList.remove('dark-mode');
         console.log("Light mode loaded from localStorage");
-    }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const rainButton = document.getElementById("rainButton");
-
-
-    rainButton.addEventListener("click", function () {
-        setInterval(createPixel, 100);
-    });
-
-
-    function createPixel() {
-        const pixel = document.createElement("div");
-        pixel.classList.add("pixel");
-
-
-        const startX = Math.random() * window.innerWidth;
-        const startColor = getRandomColor();
-
-
-        pixel.style.left = `${startX}px`;
-        pixel.style.backgroundColor = startColor;
-
-
-        document.body.appendChild(pixel);
-
-
-        let yPos = 0;
-        const fallSpeed = Math.random() * 3 + 2;
-
-
-        function fall() {
-            yPos += fallSpeed;
-            pixel.style.top = `${yPos}px`;
-
-
-            if (yPos > window.innerHeight) {
-                pixel.remove();
-            }
-        }
-
-
-        setInterval(fall, 20);
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
     }
 
 
-    function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
-});
+   
+    /* cards */
 
-
-document.addEventListener('DOMContentLoaded', function () {
     if ('IntersectionObserver' in window) {
         const cards = document.querySelectorAll('.info-card');
 
@@ -142,6 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
             card.style.transform = 'translateY(0)';
         });
     }
-});
 
+});
 
